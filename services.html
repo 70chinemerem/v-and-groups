@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Services — v-and-groups</title>
+    <link rel="icon" type="image/svg+xml" href="src/assets/V.png">
+    <!-- Tailwind / project stylesheet -->
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body>
+    <!--theme-toggle-->
+    <button id="theme-toggle"
+        class="fixed top-4 right-4 rounded-full shadow-lg bg-gray-800 p-2  transition-colors hover:bg-gray-500">
+        ☀️
+    </button>
+    <!--logo-->
+    <a href="index.html" class="items-center flex space-x-4 p-4 bg-gray-900 text-white">
+        <h1 class="text-2xl font-semibold "><img src="src/assets/my-logo 2.png"></h1>
+    </a>
+    <div class="max-w-5xl mx-auto px-4 py-8 text-center">
+        <header class="flex items-center gap-4">
+            <div>
+                <h1 class="text-2xl font-bold mb-4">Sommy Repairs gives</h1>
+                <div class="font-semibold">Professional phone repair & diagnostics</div>
+            </div>
+        </header>
+        <section class="mt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6"
+            aria-labelledby="services-heading">
+            <div>
+                <h1 id="services-heading" class="text-3xl md:text-4xl font-bold">Phone Repair Services</h1>
+                <p class="text-gray-600 mt-2">Fast, reliable repairs for phones and tablets — screen replacement,
+                    battery swaps, water damage recovery, and full diagnostics. Same-day service available for most
+                    models.</p><br>
+                <a href="contact.html"
+                    class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded items-center">
+                    book a repair</a>
+            </div>
+        </section>
+
+        <section class="mt-8" aria-label="Service offerings">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <article class="bg-white rounded-xl p-6 shadow hover:-translate-y-1 transition cursor-pointer"
+                    aria-labelledby="s1">
+                    <div class="text-3xl">📱</div>
+                    <h3 id="s1" class="mt-4 text-lg font-semibold">Screen Replacement</h3>
+                    <p class="text-gray-600 mt-2">Cracked or unresponsive screen? We replace glass and OLED/LCD
+                        assemblies with OEM-quality parts and precision installation.</p>
+                </article>
+
+                <article class="bg-white rounded-xl p-6 shadow hover:-translate-y-1 transition cursor-pointer"
+                    aria-labelledby="s2">
+                    <div class="text-3xl">🔋</div>
+                    <h3 id="s2" class="mt-4 text-lg font-semibold">Battery Replacement</h3>
+                    <p class="text-gray-600 mt-2">Quick battery swaps with high-capacity cells and battery health
+                        diagnostics to restore full-day usage.</p>
+                </article>
+                <article class="bg-white rounded-xl p-6 shadow hover:-translate-y-1 transition cursor-pointer"
+                    aria-labelledby="s3">
+                    <div class="text-3xl">💧</div>
+                    <h3 id="s3" class="mt-4 text-lg font-semibold">Water & Liquid Damage</h3>
+                    <p class="text-gray-600 mt-2">Water exposure? We perform corrosion cleaning, component-level
+                        repair,
+                        and data recovery where possible.</p>
+                </article>
+                <article class="bg-white rounded-xl p-6 shadow hover:-translate-y-1 transition cursor-pointer"
+                    aria-labelledby="s4">
+                    <div class="text-3xl">🔍</div>
+                    <h3 id="s4" class="mt-4 text-lg font-semibold">Diagnostics & Data Recovery</h3>
+                    <p class="text-gray-600 mt-2">Full diagnostic checks, software troubleshooting, and data
+                        recovery
+                        services to retrieve important files safely.</p>
+                </article>
+            </div>
+        </section>
+    </div>
+    <section class="bg-gray-900 py-8 text-white">
+        <div class="container mx-auto text-center">
+            <p class="text-sm">&copy; 2024 Sommy Repairs. All rights reserved.</p>
+        </div>
+    </section>
+</body>
+
+</html>
