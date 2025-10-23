@@ -20,3 +20,8 @@ if (localStorage.getItem('theme') === 'dark') {
   document.documentElement.classList.add('dark');
   themeBtn.textContent = '☪︎';
 }
+// 🎯 Scroll to About Section
+const scrollBtn = document.getElementById('scrollBtn');
+scrollBtn.addEventListener('click', () => {
+  document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+});
