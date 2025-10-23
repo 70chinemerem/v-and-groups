@@ -10,12 +10,47 @@
 </head>
 
 <body class="bg-gray-900 text-white">
-  <section class="min-h-screen flex flex-col justify-center items-center">
+
+  <!--theme-toggle-->
+  <button id="theme-toggle"
+    class="fixed top-4 right-4 rounded-full shadow-lg bg-gray-800 p-2  transition-colors hover:bg-gray-500">
+    🌞
+  </button>
+  <!--logo-->
+  <a href="index.html" class="fixed top-4 left-4">
+    <img src="src/assets/V.png" alt="Sommy Repairs Logo" class="h-10 w-10" />
+  </a>
+  <section class=" min-h-screen flex flex-col justify-center items-center">
     <h1 class="text-4xl font-bold mb-4">Welcome to Sommy Repairs</h1>
     <p class="text-lg mb-8">Your trusted partner for all repair services.</p>
-    <a href="#services" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">
+    <a href="services.html" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">
       Explore Our Services
     </a>
+  </section>
+  <section class="bg-gray-800 py-8">
+    <div class="container mx-auto text-center">
+      <h2 class="text-2xl font-bold mb-4">Why Choose Sommy Repairs?</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li>Experienced and Certified Technicians</li>
+        <li>Affordable Pricing</li>
+        <li>Fast and Reliable Service</li>
+        <li>Customer Satisfaction Guaranteed</li>
+      </ul>
+    </div>
+  </section>
+  <section class="py-8">
+    <div class="container mx-auto text-center">
+      <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
+      <p class="mb-4">Have questions or need a quote? Reach out to us!</p>
+      <a href="contact.html" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded">
+        Get in Touch
+      </a>
+    </div>
+  </section>
+  <section class="bg-gray-900 py-8">
+    <div class="container mx-auto text-center">
+      <p class="text-sm">&copy; 2024 Sommy Repairs. All rights reserved.</p>
+    </div>
   </section>
   <script type="module" src="/src/main.js"></script>
 </body>

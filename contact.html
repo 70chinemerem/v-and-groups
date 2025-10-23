@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+    <!--theme-toggle-->
+    <button id="theme-toggle"
+        class="fixed top-4 right-4 rounded-full shadow-lg bg-gray-800 p-2  transition-colors hover:bg-gray-500">
+        🌞
+    </button>
+    <!--logo-->
+    <a href="index.html" class="fixed top-4 left-4">
+        <img src="src/assets/V.png" alt="Sommy Repairs Logo" class="h-10 w-10" />
+    </a>
+    <section class="min-h-screen flex flex-col justify-center items-center bg-gray-900 text-white">
+        <h1 class="text-4xl font-bold mb-4">Contact Us</h1>
+        <p class="text-lg mb-8">We would love to hear from you! Please fill out the form below to get in touch.</p>
+        <form class="w-full max-w-lg bg-gray-800 p-8 rounded-lg shadow-md">
+            <div class="mb-4">
+                <label class="block text-white text-sm font-bold mb-2" for="name">Name</label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="name" type="text" placeholder="Your Name">
+            </div>
+            <div class="mb-4">
+                <label class="block text-white text-sm font-bold mb-2" for="email">Email</label>
+                <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="email" type="email" placeholder="your email" required>
+            </div>
+            <div class="mb-4">
+                <label class="block text-white text-sm font-bold mb-2" for="message">Message</label>
+                <textarea
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="message" rows="5" placeholder="Your message..." required></textarea>
+            </div>
+            <div class="flex items-center justify-between">
+                <button
+                    class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    type="submit">
+                    Send Message
+                </button>
+            </div>
+        </form>
+    </section>
+    <!--foter-->
+    <footer class="bg-gray-900 py-8">
+        <div class="container mx-auto text-center">
+            <p class="text-sm text-white">&copy; 2024 Sommy Repairs. All rights reserved.</p>
+        </div>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
