@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/src/style.css">
 </head>
 
-<body class="bg-gray-700">
+<body class="bg-gray-400">
     <!--theme-toggle-->
     <button id="theme-toggle"
         class="fixed top-4 right-4 rounded-full shadow-lg bg-gray-800 p-2  transition-colors hover:bg-gray-500">
@@ -20,61 +20,163 @@
     <a href="index.html" class="items-center flex space-x-4 p-4 bg-gray-900 text-white">
         <h1 class="text-2xl font-semibold "><img src="src/assets/my-logo 2.png"></h1>
     </a>
-    <div class="bg-gray-700 max-w-5xl mx-auto px-4 py-8 text-center">
-        <header class="flex items-center gap-4">
-            <div>
-                <h1 class="text-2xl font-bold mb-4 text-white">Sommy Repairs gives</h1>
-                <div class="font-semibold text-white">Professional phone repair & diagnostics</div>
-            </div>
-        </header>
-        <section class="bg-gray-700 mt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6"
-            aria-labelledby="services-heading">
-            <div>
-                <h1 id="services-heading" class="text-3xl md:text-4xl font-bold text-white">Phone Repair Services</h1>
-                <p class="text-white mt-2">Fast, reliable repairs for phones and tablets — screen replacement,
-                    battery swaps, water damage recovery, and full diagnostics. Same-day service available for most
-                    models.</p><br>
-                <a href="contact.html"
-                    class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded items-center">
-                    book a repair</a>
-            </div>
-        </section>
+    <!-- Book a Repair Section -->
+    <section class="mt-12 bg-gray-400 dark:bg-gray-800 p-8 rounded-xl">
+        <h2 class="text-3xl font-bold text-center mb-8 text-white">Book a Repair</h2>
+        <div class="max-w-4xl mx-auto">
+            <form class="space-y-6" onsubmit="handleBookingSubmit(event)">
+                <!-- Personal Information -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-semibold mb-2 text-white">Full Name *</label>
+                        <input type="text" name="fullName" required
+                            class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
+                            placeholder="Enter your full name">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-2 text-white">Phone Number *</label>
+                        <input type="tel" name="phone" required
+                            class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
+                            placeholder="Enter your phone number">
+                    </div>
+                </div>
 
-        <section class="mt-8" aria-label="Service offerings">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-white">
-                <article class="bg-gray-500 rounded-xl p-6 shadow hover:-translate-y-1 transition cursor-pointer"
-                    aria-labelledby="s1">
-                    <div class="text-3xl">📱</div>
-                    <h3 id="s1" class="mt-4 text-lg font-semibold">Screen Replacement</h3>
-                    <p class="text-white mt-2">Cracked or unresponsive screen? We replace glass and OLED/LCD
-                        assemblies with OEM-quality parts and precision installation.</p>
-                </article>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-semibold mb-2 text-white">Email Address</label>
+                        <input type="email" name="email"
+                            class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
+                            placeholder="Enter your email (optional)">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-2 text-white">Preferred Date</label>
+                        <input type="date" name="preferredDate"
+                            class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black">
+                    </div>
+                </div>
 
-                <article class="bg-gray-500 rounded-xl p-6 shadow hover:-translate-y-1 transition cursor-pointer"
-                    aria-labelledby="s2">
-                    <div class="text-3xl">🔋</div>
-                    <h3 id="s2" class="mt-4 text-lg font-semibold">Battery Replacement</h3>
-                    <p class="text-white mt-2">Quick battery swaps with high-capacity cells and battery health
-                        diagnostics to restore full-day usage.</p>
-                </article>
-                <article class="bg-gray-500 rounded-xl p-6 shadow hover:-translate-y-1 transition cursor-pointer"
-                    aria-labelledby="s3">
-                    <div class="text-3xl">💧</div>
-                    <h3 id="s3" class="mt-4 text-lg font-semibold">Water & Liquid Damage</h3>
-                    <p class="text-white mt-2">Water exposure? We perform corrosion cleaning, component-level
-                        repair,
-                        and data recovery where possible.</p>
-                </article>
-                <article class="bg-gray-500 rounded-xl p-6 shadow hover:-translate-y-1 transition cursor-pointer"
-                    aria-labelledby="s4">
-                    <div class="text-3xl">🔍</div>
-                    <h3 id="s4" class="mt-4 text-lg font-semibold">Diagnostics & Data Recovery</h3>
-                    <p class="text-white mt-2">Full diagnostic checks, software troubleshooting, and data
-                        recovery
-                        services to retrieve important files safely.</p>
-                </article>
+                <!-- Device Information -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-semibold mb-2 text-white">Phone Brand *</label>
+                        <select name="phoneBrand" required
+                            class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black">
+                            <option value="">Select your phone brand</option>
+                            <option value="iphone">iPhone</option>
+                            <option value="samsung">Samsung</option>
+                            <option value="google">Google Pixel</option>
+                            <option value="oneplus">OnePlus</option>
+                            <option value="huawei">Huawei</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-2 text-white">Phone Model *</label>
+                        <input type="text" name="phoneModel" required
+                            class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
+                            placeholder="e.g., iPhone 15 Pro Max, Samsung Galaxy S24">
+                    </div>
+                </div>
+
+                <!-- Repair Information -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-semibold mb-2 text-white">Repair Type *</label>
+                        <select name="repairType" required
+                            class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black">
+                            <option value="">Select repair type</option>
+                            <option value="screen">Screen Replacement</option>
+                            <option value="battery">Battery Replacement</option>
+                            <option value="water">Water Damage</option>
+                            <option value="charging">Charging Port</option>
+                            <option value="camera">Camera Repair</option>
+                            <option value="software">Software Issues</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-2 text-white">Urgency Level</label>
+                        <select name="urgency"
+                            class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black">
+                            <option value="normal">Normal (1-2 days)</option>
+                            <option value="urgent">Urgent (Same day)</option>
+                            <option value="emergency">Emergency (ASAP)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Problem Description -->
+                <div>
+                    <label class="block text-sm font-semibold mb-2 text-white">Problem Description *</label>
+                    <textarea name="problemDescription" required rows="4"
+                        class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
+                        placeholder="Please describe the issue with your phone in detail..."></textarea>
+                </div>
+
+                <!-- Additional Services -->
+                <div>
+                    <label class="block text-sm font-semibold mb-2 text-white">Additional Services
+                        (Optional)</label>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <label class="flex items-center space-x-2 text-white">
+                            <input type="checkbox" name="dataBackup" value="yes" class="rounded">
+                            <span>Data Backup Service</span>
+                        </label>
+                        <label class="flex items-center space-x-2 text-white">
+                            <input type="checkbox" name="screenProtector" value="yes" class="rounded">
+                            <span>Screen Protector Installation</span>
+                        </label>
+                        <label class="flex items-center space-x-2 text-white">
+                            <input type="checkbox" name="caseInstallation" value="yes" class="rounded">
+                            <span>Case Installation</span>
+                        </label>
+                        <label class="flex items-center space-x-2 text-white">
+                            <input type="checkbox" name="warrantyExtension" value="yes" class="rounded">
+                            <span>Extended Warranty</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="text-center">
+                    <button type="submit"
+                        class="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+                        Book Repair Appointment
+                    </button>
+                </div>
+            </form>
+
+            <!-- Booking Information -->
+            <div class="mt-8 bg-gray-500 dark:bg-gray-700 p-6 rounded-lg">
+                <h3 class="text-xl font-semibold mb-4 text-white">What Happens Next?</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <div class="text-3xl mb-2">📞</div>
+                        <h4 class="font-semibold text-white">1. Confirmation Call</h4>
+                        <p class="text-sm text-gray-300">We'll call you within 2 hours to confirm your appointment
+                        </p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl mb-2">🔧</div>
+                        <h4 class="font-semibold text-white">2. Repair Process</h4>
+                        <p class="text-sm text-gray-300">Our expert technicians will diagnose and fix your device
+                        </p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl mb-2">✅</div>
+                        <h4 class="font-semibold text-white">3. Quality Check</h4>
+                        <p class="text-sm text-gray-300">We test everything to ensure perfect functionality</p>
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
+
+    <section class="text-center p-4 mt-8">
+        <a href="index.html"
+            class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded items-center">
+            Back to Home</a>
+    </section>
     </div>
     <section class="bg-gray-900 py-8 text-white">
         <div class="container mx-auto text-center">

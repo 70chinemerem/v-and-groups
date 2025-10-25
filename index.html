@@ -30,6 +30,15 @@
       <span class="hidden sm:inline">Chat with us</span>
     </a>
   </div>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <!-- Scroll to Top Button -->
+  <button id="scroll-to-top" class="scroll-to-top" onclick="scrollToTop()">
+    ↑
+  </button>
+
   <!--logo-->
   <a href="index.html" class="items-center flex space-x-4 p-4 bg-gray-900 text-white">
     <h1 class="text-2xl font-semibold "><img src="src/assets/my-logo 2.png"></h1>
@@ -37,46 +46,144 @@
   <section class=" min-h-screen flex flex-col justify-center items-center">
     <h1 class="text-4xl font-bold mb-4">Welcome to Sommy Repairs</h1>
     <p class="text-lg mb-8">Your trusted partner for all phone repair services.</p>
-    <button id="scrollBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">
-      Get Started
-    </button>
+    <div class="flex flex-col sm:flex-row gap-4">
+      <button id="scrollBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">
+        Get Started
+      </button>
+      <a href="#services"
+        class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded text-center">
+        Our Services
+      </a>
+      <a href="#calculator"
+        class="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded text-center">
+        Cost Calculator
+      </a>
+    </div>
   </section>
-  <!-- 💡 About Section -->
-  <section id="about" class="py-16 px-6 md:px-16 bg-gray-400 dark:bg-gray-800">
-    <h2 class="text-3xl font-bold text-center mb-10">Why Choose Sommy Repairs?</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="p-6 bg-gray-500 dark:bg-gray-700 rounded-xl shadow hover:-translate-y-1 transition cursor-pointer">
-        <div class="text-4xl mb-3">🪛</div>
-        <h3 class="text-xl font-semibold mb-2">we give the best phone repair</h3>
-        <p> Expert technicians ensuring top-notch repairs for all phone models.</p>
+
+  <!-- Our Services Section -->
+  <section id="services" class="py-16 px-6 md:px-16 bg-gray-300 dark:bg-gray-900">
+    <h2 class="text-3xl font-bold text-center mb-10 text-gray-800 dark:text-white">Our Services</h2>
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Screen Replacement -->
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="text-4xl mb-4 text-center">📱</div>
+          <h3 class="text-xl font-semibold mb-3 text-gray-800 dark:text-white">Screen Replacement</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">Professional screen repairs for all phone models. We use
+            high-quality OEM and aftermarket parts.</p>
+          <ul class="text-sm text-gray-500 dark:text-gray-400 space-y-1">
+            <li>• iPhone screens</li>
+            <li>• Samsung Galaxy screens</li>
+            <li>• Google Pixel screens</li>
+            <li>• All major brands</li>
+          </ul>
+        </div>
+
+        <!-- Battery Replacement -->
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="text-4xl mb-4 text-center">🔋</div>
+          <h3 class="text-xl font-semibold mb-3 text-gray-800 dark:text-white">Battery Replacement</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">Fast battery swaps with genuine parts. Restore your phone's
+            battery life to like-new condition.</p>
+          <ul class="text-sm text-gray-500 dark:text-gray-400 space-y-1">
+            <li>• Quick 30-45 minute service</li>
+            <li>• Genuine battery parts</li>
+            <li>• Battery health diagnostics</li>
+            <li>• Warranty included</li>
+          </ul>
+        </div>
+
+        <!-- Water Damage Repair -->
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="text-4xl mb-4 text-center">💧</div>
+          <h3 class="text-xl font-semibold mb-3 text-gray-800 dark:text-white">Water Damage Repair</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">Expert water damage recovery services. We can often save
+            phones that others can't.</p>
+          <ul class="text-sm text-gray-500 dark:text-gray-400 space-y-1">
+            <li>• Immediate assessment</li>
+            <li>• Corrosion cleaning</li>
+            <li>• Component replacement</li>
+            <li>• Data recovery</li>
+          </ul>
+        </div>
+
+        <!-- Charging Port Repair -->
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="text-4xl mb-4 text-center">🔌</div>
+          <h3 class="text-xl font-semibold mb-3 text-gray-800 dark:text-white">Charging Port Repair</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">Fix charging issues with professional port cleaning and
+            replacement services.</p>
+          <ul class="text-sm text-gray-500 dark:text-gray-400 space-y-1">
+            <li>• Port cleaning</li>
+            <li>• Connector replacement</li>
+            <li>• Fast charging support</li>
+            <li>• Same-day service</li>
+          </ul>
+        </div>
+
+        <!-- Camera Repair -->
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="text-4xl mb-4 text-center">📸</div>
+          <h3 class="text-xl font-semibold mb-3 text-gray-800 dark:text-white">Camera Repair</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">Professional camera module repairs for front and rear cameras
+            on all phone models.</p>
+          <ul class="text-sm text-gray-500 dark:text-gray-400 space-y-1">
+            <li>• Front camera repair</li>
+            <li>• Rear camera repair</li>
+            <li>• Camera module replacement</li>
+            <li>• Focus calibration</li>
+          </ul>
+        </div>
+
+        <!-- Software Issues -->
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+          <div class="text-4xl mb-4 text-center">💻</div>
+          <h3 class="text-xl font-semibold mb-3 text-gray-800 dark:text-white">Software Issues</h3>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">Troubleshoot and fix software problems, updates, and
+            performance issues.</p>
+          <ul class="text-sm text-gray-500 dark:text-gray-400 space-y-1">
+            <li>• System updates</li>
+            <li>• Performance optimization</li>
+            <li>• Data recovery</li>
+            <li>• Factory reset</li>
+          </ul>
+        </div>
       </div>
-      <div class="p-6 bg-gray-500 dark:bg-gray-700 rounded-xl shadow hover:-translate-y-1 transition cursor-pointer">
-        <div class="text-4xl mb-3">⚙️</div>
-        <h3 class="text-xl font-semibold mb-2">Quality Parts</h3>
-        <p> we use only high-quality, genuine parts for all repairs.</p>
+
+      <!-- Service Features -->
+      <div class="mt-12 bg-gray-100 dark:bg-gray-800 p-8 rounded-xl">
+        <h3 class="text-2xl font-bold text-center mb-6 text-gray-800 dark:text-white">Why Choose Our Services?</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="text-center">
+            <div class="text-3xl mb-2">⚡</div>
+            <h4 class="font-semibold text-gray-800 dark:text-white">Fast Service</h4>
+            <p class="text-sm text-gray-600 dark:text-gray-300">Most repairs completed same day</p>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl mb-2">🛡️</div>
+            <h4 class="font-semibold text-gray-800 dark:text-white">Warranty</h4>
+            <p class="text-sm text-gray-600 dark:text-gray-300">90-day warranty on all repairs</p>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl mb-2">🔧</div>
+            <h4 class="font-semibold text-gray-800 dark:text-white">Expert Technicians</h4>
+            <p class="text-sm text-gray-600 dark:text-gray-300">Certified repair specialists</p>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl mb-2">💰</div>
+            <h4 class="font-semibold text-gray-800 dark:text-white">Fair Pricing</h4>
+            <p class="text-sm text-gray-600 dark:text-gray-300">Competitive and transparent rates</p>
+          </div>
+        </div>
       </div>
-      <div class="p-6 bg-gray-500 dark:bg-gray-700 rounded-xl shadow hover:-translate-y-1 transition cursor-pointer">
-        <div class="text-4xl mb-3">🎯</div>
-        <h3 class="text-xl font-semibold mb-2">Expert Guidance</h3>
-        <p> Our team provides personalized advice to help you choose the best accessories for your device.</p>
-      </div>
-      <div class="p-6 bg-gray-500 dark:bg-gray-700 rounded-xl shadow hover:-translate-y-1 transition cursor-pointer">
-        <div class="text-4xl mb-3">🚀</div>
-        <h3 class="text-xl font-semibold mb-2">Fast Turnaround</h3>
-        <p> We understand the urgency of phone repairs and strive to complete them quickly without compromising quality.
-        </p>
-      </div>
-      <div class="p-6 bg-gray-500 dark:bg-gray-700 rounded-xl shadow hover:-translate-y-1 transition cursor-pointer">
-        <div class="text-4xl mb-3">💼</div>
-        <h3 class="text-xl font-semibold mb-2">Comprehensive Services</h3>
-        <p> From screen replacements to battery repairs, we offer a wide range of services to meet all your phone repair
-          needs.</p>
-      </div>
-      <div class="p-6 bg-gray-500 dark:bg-gray-700 rounded-xl shadow hover:-translate-y-1 transition cursor-pointer">
-        <div class="text-4xl mb-3">🌟</div>
-        <h3 class="text-xl font-semibold mb-2">Customer Satisfaction</h3>
-        <p> Our commitment to customer satisfaction means we go the extra mile to ensure you're happy with our services.
-        </p>
+
+      <!-- Call to Action -->
+      <div class="text-center mt-8">
+        <a href="services.html"
+          class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors inline-block">
+          View All Services
+        </a>
       </div>
     </div>
   </section>
@@ -94,7 +201,8 @@
             <div class="flex text-yellow-400">★★★★★</div>
           </div>
         </div>
-        <p class="text-gray-600 dark:text-gray-300">"Excellent service! My iPhone screen was replaced in just 2 hours.
+        <p class="text-gray-600 dark:text-gray-300">"Excellent
+          service! My iPhone screen was replaced in just 2 hours.
           Professional and affordable. Highly recommended!"</p>
       </div>
 
@@ -104,7 +212,8 @@
             class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-xl">S
           </div>
           <div class="ml-4">
-            <h4 class="font-semibold text-gray-800 dark:text-white">Sarah Williams</h4>
+            <h4 class="font-semibold text-gray-800 dark:text-white">
+              Sarah Williams</h4>
             <div class="flex text-yellow-400">★★★★★</div>
           </div>
         </div>
@@ -191,7 +300,7 @@
   </section>
 
   <!-- Repair Cost Calculator -->
-  <section class="py-16 px-6 md:px-16 bg-gray-400 dark:bg-gray-800">
+  <section id="calculator" class="py-16 px-6 md:px-16 bg-gray-400 dark:bg-gray-800">
     <h2 class="text-3xl font-bold text-center mb-10 text-black">Repair Cost Calculator</h2>
     <div class="max-w-2xl mx-auto bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg">
       <div class="space-y-6">
@@ -225,8 +334,8 @@
 
         <div>
           <label class="block text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300">Phone Model
-            (Optional)</label>
-          <input type="text" id="phone-model" placeholder="e.g., iPhone 13, Samsung Galaxy S21"
+            <span class="text-red-500">*</span></label>
+          <input type="text" id="phone-model" placeholder="e.g., iPhone 15 Pro Max, Samsung Galaxy S24 Ultra" required
             class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black">
         </div>
 
@@ -244,26 +353,11 @@
     </div>
   </section>
 
-  <section class="bg-gray-700 py-8">
-    <div class="container mx-auto text-center">
-      <h2 class="text-2xl font-bold mb-4">Our Services!</h2>
-      <p class="mb-4"></p>
-      <a href="services.html" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded">
-        Explore Our Service
-      </a>
-      <div class="mt-8">
-        <img src="src/assets/our-services.png" alt="Our Services" class="mx-auto w-1/2 rounded-lg shadow-lg">
-      </div>
-  </section>
-
-  <section class="bg-gray-800 py-8">
-    <div class="container mx-auto text-center">
-      <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
-      <p class="mb-4">Have questions or need a quote? Reach out to us!</p>
-      <a href="customer-care.html" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded">
-        Get in Touch
-      </a>
-    </div>
+  <section class="text-center p-4 mt-8">
+    <h2 class="text-2xl font-bold mb-4 text-white">Need More Help?</h2>
+    <a href="contact.html"
+      class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded items-center">
+      Customer Care</a>
   </section>
   <section class="bg-gray-900 py-8">
     <div class="container mx-auto text-center">
@@ -271,6 +365,27 @@
     </div>
   </section>
   <script type="module" src="/src/main.js"></script>
+  <script>
+    // Test if FAQ is working
+    console.log('Page loaded, FAQ function available:', typeof window.toggleFAQ);
+    console.log('Calculator function available:', typeof window.calculateRepairCost);
+
+    // Test calculator with sample data
+    setTimeout(() => {
+      console.log('Testing calculator elements...');
+      const brandSelect = document.getElementById('phone-brand');
+      const repairSelect = document.getElementById('repair-type');
+      const modelInput = document.getElementById('phone-model');
+      const resultDiv = document.getElementById('cost-result');
+
+      console.log('Elements found:', {
+        brandSelect: !!brandSelect,
+        repairSelect: !!repairSelect,
+        modelInput: !!modelInput,
+        resultDiv: !!resultDiv
+      });
+    }, 1000);
+  </script>
 </body>
 
 </html>
