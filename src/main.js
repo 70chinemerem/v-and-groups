@@ -6,13 +6,13 @@
 * Persists user preference in localStorage
 * Updates button icon dynamically
 */
-// 🌞 Theme Toggle
+// ☀️ Theme Toggle
 const themeBtn = document.getElementById('themeToggle');
 themeBtn.addEventListener('click', () => {
   document.documentElement.classList.toggle('dark');
   const mode = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
   localStorage.setItem('theme', mode);
-  themeBtn.textContent = mode === 'dark' ? '🌚' : '🌞';
+  themeBtn.textContent = mode === 'dark' ? '🌚' : '☀️';
 });
 
 // Load theme from localStorage
