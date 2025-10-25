@@ -74,3 +74,32 @@ html {
   z-index: 1000;
   transition: width 0.1s ease;
 }
+
+/* Enhanced placeholder styling for better visibility */
+input::placeholder,
+textarea::placeholder {
+  color: #6b7280 !important;
+  opacity: 0.8 !important;
+  font-weight: 500;
+}
+
+/* Light mode placeholder enhancement */
+input:not(.dark)::placeholder,
+textarea:not(.dark)::placeholder {
+  color: #4b5563 !important;
+  opacity: 0.9 !important;
+}
+
+/* Dark mode placeholder styling */
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #9ca3af !important;
+  opacity: 0.8 !important;
+}
+
+/* Focus state placeholder styling */
+input:focus::placeholder,
+textarea:focus::placeholder {
+  opacity: 0.6 !important;
+  transition: opacity 0.2s ease;
+}
