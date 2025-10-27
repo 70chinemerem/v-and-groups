@@ -36,9 +36,9 @@
     <h1 class="text-4xl font-bold mb-4">Welcome to Sommy Repairs</h1>
     <p class="text-lg mb-8">Your trusted partner for all phone repair services.</p>
     <div class="flex flex-col sm:flex-row gap-4">
-    <button id="scrollBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">
-      Get Started
-    </button>
+      <button id="scrollBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">
+        Get Started
+      </button>
       <a href="#services"
         class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded text-center">
         Our Services
@@ -231,66 +231,240 @@
     <h2 class="text-3xl font-bold text-center mb-10 text-white">Frequently Asked Questions</h2>
     <div class="max-w-4xl mx-auto">
       <div class="space-y-4">
+        <!-- Repair Time Question -->
         <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md">
-          <button class="w-full text-left p-6 focus:outline-none" onclick="toggleFAQ(this)">
+          <button class="w-full text-left p-6 focus:outline-none faq-button" onclick="toggleFAQ(this)">
             <div class="flex justify-between items-center">
               <h3 class="text-lg font-semibold text-gray-800 dark:text-white">How long does a typical repair take?</h3>
               <span class="text-2xl text-gray-500">+</span>
             </div>
             <div class="faq-content hidden mt-4">
-              <p class="text-gray-600 dark:text-gray-300">Most screen replacements take 1-2 hours, while battery
-                replacements are usually completed in 30-45 minutes. Complex repairs may take longer, but we'll always
-                give you an accurate timeline.</p>
+              <p class="text-gray-600 dark:text-gray-300">Repair times vary by service type:</p>
+              <ul class="text-gray-600 dark:text-gray-300 mt-2 ml-4 space-y-1">
+                <li>• Screen replacements: 1-2 hours</li>
+                <li>• Battery replacements: 30-45 minutes</li>
+                <li>• Charging port repairs: 45-60 minutes</li>
+                <li>• Camera repairs: 1-1.5 hours</li>
+                <li>• Water damage: 2-4 hours (assessment + repair)</li>
+                <li>• Software issues: 30 minutes to 2 hours</li>
+              </ul>
+              <p class="text-gray-600 dark:text-gray-300 mt-2">We always provide accurate timelines and keep you updated
+                throughout the process.</p>
             </div>
           </button>
         </div>
 
+        <!-- Warranty Question -->
         <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md">
-          <button class="w-full text-left p-6 focus:outline-none" onclick="toggleFAQ(this)">
+          <button class="w-full text-left p-6 focus:outline-none faq-button" onclick="toggleFAQ(this)">
             <div class="flex justify-between items-center">
               <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Do you offer warranty on repairs?</h3>
               <span class="text-2xl text-gray-500">+</span>
             </div>
             <div class="faq-content hidden mt-4">
-              <p class="text-gray-600 dark:text-gray-300">Yes! We provide a 90-day warranty on all repairs. This covers
-                both parts and labor, giving you peace of mind.</p>
+              <p class="text-gray-600 dark:text-gray-300">Yes! We provide comprehensive warranty coverage:</p>
+              <ul class="text-gray-600 dark:text-gray-300 mt-2 ml-4 space-y-1">
+                <li>• 90-day warranty on all repairs</li>
+                <li>• Covers both parts and labor</li>
+                <li>• Free re-repair if issues arise</li>
+                <li>• Warranty void only for physical damage or unauthorized modifications</li>
+                <li>• Warranty certificate provided with each repair</li>
+              </ul>
             </div>
           </button>
         </div>
 
+        <!-- Phone Brands Question -->
         <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md">
-          <button class="w-full text-left p-6 focus:outline-none" onclick="toggleFAQ(this)">
+          <button class="w-full text-left p-6 focus:outline-none faq-button" onclick="toggleFAQ(this)">
             <div class="flex justify-between items-center">
               <h3 class="text-lg font-semibold text-gray-800 dark:text-white">What phone brands do you repair?</h3>
               <span class="text-2xl text-gray-500">+</span>
             </div>
             <div class="faq-content hidden mt-4">
-              <p class="text-gray-600 dark:text-gray-300">We repair all major brands including iPhone, Samsung, Google
-                Pixel, OnePlus, Huawei, and many others. Contact us to confirm if we can repair your specific model.</p>
+              <p class="text-gray-600 dark:text-gray-300">We repair all major smartphone brands:</p>
+              <ul class="text-gray-600 dark:text-gray-300 mt-2 ml-4 space-y-1">
+                <li>• iPhone (all models from iPhone 6 to iPhone 15 series)</li>
+                <li>• Samsung Galaxy (S, Note, A, Z series)</li>
+                <li>• Google Pixel (all generations)</li>
+                <li>• OnePlus (all models)</li>
+                <li>• Huawei (P, Mate series)</li>
+                <li>• Xiaomi, Oppo, Vivo</li>
+                <li>• LG, Motorola, Nokia</li>
+              </ul>
+              <p class="text-gray-600 dark:text-gray-300 mt-2">Contact us to confirm repair availability for your
+                specific model.</p>
             </div>
           </button>
         </div>
 
+        <!-- Data Backup Question -->
         <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md">
-          <button class="w-full text-left p-6 focus:outline-none" onclick="toggleFAQ(this)">
+          <button class="w-full text-left p-6 focus:outline-none faq-button" onclick="toggleFAQ(this)">
             <div class="flex justify-between items-center">
               <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Do I need to backup my data before repair?
               </h3>
               <span class="text-2xl text-gray-500">+</span>
             </div>
             <div class="faq-content hidden mt-4">
-              <p class="text-gray-600 dark:text-gray-300">While we take every precaution to protect your data, we always
-                recommend backing up your device before any repair. We can help you with this process if needed.</p>
+              <p class="text-gray-600 dark:text-gray-300">While we take every precaution to protect your data, we
+                strongly recommend backing up your device before any repair:</p>
+              <ul class="text-gray-600 dark:text-gray-300 mt-2 ml-4 space-y-1">
+                <li>• Use iCloud (iPhone) or Google Drive (Android)</li>
+                <li>• We offer free data backup service during repair</li>
+                <li>• Data recovery available if needed (additional cost)</li>
+                <li>• We're not responsible for data loss during repairs</li>
+              </ul>
+              <p class="text-gray-600 dark:text-gray-300 mt-2">We can help you with the backup process if needed.</p>
+            </div>
+          </button>
+        </div>
+
+        <!-- Pricing Question -->
+        <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md">
+          <button class="w-full text-left p-6 focus:outline-none faq-button" onclick="toggleFAQ(this)">
+            <div class="flex justify-between items-center">
+              <h3 class="text-lg font-semibold text-gray-800 dark:text-white">How do you determine repair pricing?</h3>
+              <span class="text-2xl text-gray-500">+</span>
+            </div>
+            <div class="faq-content hidden mt-4">
+              <p class="text-gray-600 dark:text-gray-300">Our pricing is based on real-world repair costs and several
+                factors:</p>
+              <ul class="text-gray-600 dark:text-gray-300 mt-2 ml-4 space-y-1">
+                <li>• Official manufacturer repair prices (Apple, Samsung, Google)</li>
+                <li>• Phone model and age</li>
+                <li>• Type of repair needed</li>
+                <li>• Part quality (OEM vs aftermarket)</li>
+                <li>• Complexity of the repair</li>
+                <li>• Current market prices for parts in Nigeria</li>
+              </ul>
+              <p class="text-gray-600 dark:text-gray-300 mt-2">Use our cost calculator above for estimates, or contact
+                us for exact pricing. We offer competitive rates in Nigerian Naira (₦) with transparent pricing and no
+                hidden fees.</p>
+            </div>
+          </button>
+        </div>
+
+        <!-- Payment Methods Question -->
+        <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md">
+          <button class="w-full text-left p-6 focus:outline-none faq-button" onclick="toggleFAQ(this)">
+            <div class="flex justify-between items-center">
+              <h3 class="text-lg font-semibold text-gray-800 dark:text-white">What payment methods do you accept?</h3>
+              <span class="text-2xl text-gray-500">+</span>
+            </div>
+            <div class="faq-content hidden mt-4">
+              <p class="text-gray-600 dark:text-gray-300">We accept multiple payment methods for your convenience:</p>
+              <ul class="text-gray-600 dark:text-gray-300 mt-2 ml-4 space-y-1">
+                <li>• Cash payments</li>
+                <li>• Bank transfers</li>
+                <li>• Mobile money (MTN, Airtel, 9mobile)</li>
+                <li>• POS card payments</li>
+                <li>• Cryptocurrency (Bitcoin, Ethereum)</li>
+              </ul>
+              <p class="text-gray-600 dark:text-gray-300 mt-2">Payment is due upon completion of repair. We also offer
+                payment plans for expensive repairs.</p>
+            </div>
+          </button>
+        </div>
+
+        <!-- Emergency Service Question -->
+        <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md">
+          <button class="w-full text-left p-6 focus:outline-none faq-button" onclick="toggleFAQ(this)">
+            <div class="flex justify-between items-center">
+              <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Do you offer emergency or same-day
+                service?</h3>
+              <span class="text-2xl text-gray-500">+</span>
+            </div>
+            <div class="faq-content hidden mt-4">
+              <p class="text-gray-600 dark:text-gray-300">Yes! We understand phone emergencies happen:</p>
+              <ul class="text-gray-600 dark:text-gray-300 mt-2 ml-4 space-y-1">
+                <li>• Same-day service available (call ahead to confirm)</li>
+                <li>• Emergency repairs for urgent situations</li>
+                <li>• Express service for business customers</li>
+                <li>• Weekend and evening appointments available</li>
+                <li>• Rush service available (additional fee)</li>
+              </ul>
+              <p class="text-gray-600 dark:text-gray-300 mt-2">Contact us immediately for emergency repairs. We'll do
+                our best to accommodate urgent requests.</p>
+            </div>
+          </button>
+        </div>
+
+        <!-- Water Damage Question -->
+        <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md">
+          <button class="w-full text-left p-6 focus:outline-none faq-button" onclick="toggleFAQ(this)">
+            <div class="flex justify-between items-center">
+              <h3 class="text-lg font-semibold text-gray-800 dark:text-white">What should I do if my phone gets wet?
+              </h3>
+              <span class="text-2xl text-gray-500">+</span>
+            </div>
+            <div class="faq-content hidden mt-4">
+              <p class="text-gray-600 dark:text-gray-300">Immediate action is crucial for water damage:</p>
+              <ul class="text-gray-600 dark:text-gray-300 mt-2 ml-4 space-y-1">
+                <li>• Turn off the phone immediately</li>
+                <li>• Remove SIM card and memory card</li>
+                <li>• Don't charge or turn on the phone</li>
+                <li>• Gently dry with a soft cloth</li>
+                <li>• Bring it to us ASAP (within 24 hours)</li>
+              </ul>
+              <p class="text-gray-600 dark:text-gray-300 mt-2">The sooner you bring it in, the better our chances of
+                saving your phone. We have specialized equipment for water damage recovery.</p>
+            </div>
+          </button>
+        </div>
+
+        <!-- Parts Quality Question -->
+        <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md">
+          <button class="w-full text-left p-6 focus:outline-none faq-button" onclick="toggleFAQ(this)">
+            <div class="flex justify-between items-center">
+              <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Do you use genuine or aftermarket parts?
+              </h3>
+              <span class="text-2xl text-gray-500">+</span>
+            </div>
+            <div class="faq-content hidden mt-4">
+              <p class="text-gray-600 dark:text-gray-300">We offer both options to fit your budget and needs:</p>
+              <ul class="text-gray-600 dark:text-gray-300 mt-2 ml-4 space-y-1">
+                <li>• Genuine/OEM parts (original manufacturer parts)</li>
+                <li>• High-quality aftermarket parts</li>
+                <li>• Refurbished parts (tested and certified)</li>
+                <li>• We'll explain the differences and let you choose</li>
+                <li>• All parts come with warranty</li>
+              </ul>
+              <p class="text-gray-600 dark:text-gray-300 mt-2">We never use low-quality or counterfeit parts. All our
+                parts are tested and come with warranty coverage.</p>
+            </div>
+          </button>
+        </div>
+
+        <!-- Location and Hours Question -->
+        <div class="bg-white dark:bg-gray-700 rounded-lg shadow-md">
+          <button class="w-full text-left p-6 focus:outline-none faq-button" onclick="toggleFAQ(this)">
+            <div class="flex justify-between items-center">
+              <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Where are you located and what are your
+                hours?</h3>
+              <span class="text-2xl text-gray-500">+</span>
+            </div>
+            <div class="faq-content hidden mt-4">
+              <p class="text-gray-600 dark:text-gray-300">Our service details:</p>
+              <ul class="text-gray-600 dark:text-gray-300 mt-2 ml-4 space-y-1">
+                <li>• Located in Lagos, Nigeria</li>
+                <li>• Monday - Friday: 9:00 AM - 7:00 PM</li>
+                <li>• Saturday: 10:00 AM - 6:00 PM</li>
+                <li>• Sunday: 12:00 PM - 5:00 PM</li>
+                <li>• Emergency service available outside hours</li>
+              </ul>
+              <p class="text-gray-600 dark:text-gray-300 mt-2">We also offer pickup and delivery service for your
+                convenience. Contact us for exact location and to schedule pickup.</p>
             </div>
           </button>
         </div>
       </div>
-      </div>
+    </div>
   </section>
 
   <!-- Repair Cost Calculator -->
   <section id="calculator" class="py-16 px-6 md:px-16 bg-gray-400 dark:bg-gray-800">
-    <h2 class="text-3xl font-bold text-center mb-10 text-black">Repair Cost Calculator</h2>
+    <h2 class="text-3xl font-bold text-center mb-10 text-black">Repair Cost Calculator (₦)</h2>
     <div class="max-w-2xl mx-auto bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg">
       <div class="space-y-6">
         <div>
@@ -298,12 +472,29 @@
           <select id="phone-brand"
             class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black">
             <option value="">Select your phone brand</option>
-            <option value="iphone">iPhone</option>
-            <option value="samsung">Samsung</option>
+            <option value="iphone">iPhone (Apple)</option>
+            <option value="samsung">Samsung Galaxy</option>
             <option value="google">Google Pixel</option>
             <option value="oneplus">OnePlus</option>
             <option value="huawei">Huawei</option>
-            <option value="other">Other</option>
+            <option value="xiaomi">Xiaomi</option>
+            <option value="oppo">OPPO</option>
+            <option value="vivo">Vivo</option>
+            <option value="realme">Realme</option>
+            <option value="motorola">Motorola</option>
+            <option value="lg">LG</option>
+            <option value="sony">Sony Xperia</option>
+            <option value="nokia">Nokia</option>
+            <option value="honor">Honor</option>
+            <option value="asus">ASUS ROG Phone</option>
+            <option value="nothing">Nothing Phone</option>
+            <option value="fairphone">Fairphone</option>
+            <option value="poco">POCO</option>
+            <option value="redmi">Redmi</option>
+            <option value="infinix">Infinix</option>
+            <option value="tecno">TECNO</option>
+            <option value="itel">Itel</option>
+            <option value="other">Other Brand</option>
           </select>
         </div>
 
@@ -353,11 +544,25 @@
       <p class="text-sm">&copy; 2024 Sommy Repairs. All rights reserved.</p>
     </div>
   </section>
-  <script type="module" src="/src/main.js"></script>
+  <script src="/src/main.js"></script>
   <script>
     // Test if FAQ is working
     console.log('Page loaded, FAQ function available:', typeof window.toggleFAQ);
     console.log('Calculator function available:', typeof window.calculateRepairCost);
+
+    // Test FAQ elements
+    setTimeout(() => {
+      console.log('Testing FAQ elements...');
+      const faqButtons = document.querySelectorAll('[onclick*="toggleFAQ"]');
+      console.log('FAQ buttons found:', faqButtons.length);
+
+      faqButtons.forEach((button, index) => {
+        console.log(`FAQ button ${index}:`, button);
+        const content = button.querySelector('.faq-content');
+        const icon = button.querySelector('span');
+        console.log(`Button ${index} elements:`, { content, icon });
+      });
+    }, 1000);
 
     // Test calculator with sample data
     setTimeout(() => {
