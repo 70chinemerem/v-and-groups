@@ -4,205 +4,284 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Services — v-and-groups</title>
+    <title>Services — Sommy Repairs</title>
     <link rel="icon" type="image/svg+xml" href="src/assets/sommy-repairs-logo-icon.svg" />
     <!-- Tailwind / project stylesheet -->
     <link rel="stylesheet" href="/src/style.css">
 </head>
 
-<body class="bg-gray-400">
+<body
+    class="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
     <!--theme-toggle-->
     <button id="theme-toggle"
-        class="fixed top-4 right-4 z-50 rounded-full shadow-xl bg-white dark:bg-gray-700 border-2 border-blue-500 p-3 text-2xl min-w-[48px] min-h-[48px] flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:bg-blue-50 dark:hover:bg-gray-600">
-        <span id="theme-icon">☀️</span>
+        class="fixed top-4 right-4 z-50 rounded-full shadow-xl bg-white border-2 border-blue-500 p-3 text-2xl min-w-[48px] min-h-[48px] flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:bg-blue-50">
+        ☀️
     </button>
     <!--logo-->
-    <a href="index.html" class="logo-container items-center flex space-x-4 p-4 bg-gray-900 text-white">
+    <a href="index.html"
+        class="logo-container items-center flex space-x-4 p-4 bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 text-white">
         <h1 class="text-2xl font-semibold">
             <img src="src/assets/sommy-repairs-logo-full.svg" alt="Sommy Repairs Logo" class="h-10 md:h-12 lg:h-14">
         </h1>
     </a>
+
+    <!-- Hero Section -->
+    <section class="py-16 px-6 md:px-16 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Book Your Repair Service</h1>
+            <p class="text-xl md:text-2xl mb-8 opacity-90">Fill out the form below and we'll get back to you within 2
+                hours</p>
+            <div class="flex flex-wrap justify-center gap-4 text-sm">
+                <div class="flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
+                    <span>⚡</span>
+                    <span>Fast Service</span>
+                </div>
+                <div class="flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
+                    <span>🛡️</span>
+                    <span>90-Day Warranty</span>
+                </div>
+                <div class="flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
+                    <span>⭐</span>
+                    <span>Expert Technicians</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Book a Repair Section -->
-    <section class="mt-12 bg-gray-400 dark:bg-gray-800 p-8 rounded-xl">
-        <h2 class="text-3xl font-bold text-center mb-8 text-white">Book a Repair</h2>
-        <div class="max-w-4xl mx-auto">
-            <form class="space-y-6" onsubmit="handleBookingSubmit(event)">
-                <!-- Personal Information -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-sm font-semibold mb-2 text-white">Full Name *</label>
-                        <input type="text" name="fullName" required
-                            class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
-                            placeholder="Enter your full name">
+    <section class="py-16 px-6 md:px-16">
+        <div class="max-w-5xl mx-auto">
+            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-8 md:p-12">
+                <form class="space-y-8" onsubmit="handleBookingSubmit(event)">
+                    <!-- Section Header -->
+                    <div class="border-b-2 border-blue-200 dark:border-gray-700 pb-4 mb-6">
+                        <h2 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white">Personal Information
+                        </h2>
+                        <p class="text-gray-600 dark:text-gray-400 mt-2">Tell us about yourself</p>
                     </div>
-                    <div>
-                        <label class="block text-sm font-semibold mb-2 text-white">Phone Number *</label>
-                        <input type="tel" name="phone" required
-                            class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
-                            placeholder="Enter your phone number">
-                    </div>
-                </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-sm font-semibold mb-2 text-white">Email Address</label>
-                        <input type="email" name="email"
-                            class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
-                            placeholder="Enter your email (optional)">
+                    <!-- Personal Information -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300">
+                                Full Name <span class="text-red-500">*</span>
+                            </label>
+                            <input type="text" name="fullName" required
+                                class="w-full border-2 border-gray-300 dark:border-gray-600 rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-white dark:bg-gray-700 transition-all"
+                                placeholder="Enter your full name">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300">
+                                Phone Number <span class="text-red-500">*</span>
+                            </label>
+                            <input type="tel" name="phone" required
+                                class="w-full border-2 border-gray-300 dark:border-gray-600 rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-white dark:bg-gray-700 transition-all"
+                                placeholder="Enter your phone number">
+                        </div>
                     </div>
-                    <div>
-                        <label class="block text-sm font-semibold mb-2 text-white">Preferred Date</label>
-                        <input type="date" name="preferredDate"
-                            class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
-                            placeholder="Select a date for repair">
-                    </div>
-                </div>
 
-                <!-- Device Information -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-sm font-semibold mb-2 text-white">Phone Brand *</label>
-                        <select name="phoneBrand" required
-                            class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black">
-                            <option value="">Select your phone brand</option>
-                            <option value="iphone">iPhone (Apple)</option>
-                            <option value="samsung">Samsung Galaxy</option>
-                            <option value="google">Google Pixel</option>
-                            <option value="oneplus">OnePlus</option>
-                            <option value="huawei">Huawei</option>
-                            <option value="xiaomi">Xiaomi</option>
-                            <option value="oppo">OPPO</option>
-                            <option value="vivo">Vivo</option>
-                            <option value="realme">Realme</option>
-                            <option value="motorola">Motorola</option>
-                            <option value="lg">LG</option>
-                            <option value="sony">Sony Xperia</option>
-                            <option value="nokia">Nokia</option>
-                            <option value="honor">Honor</option>
-                            <option value="asus">ASUS ROG Phone</option>
-                            <option value="nothing">Nothing Phone</option>
-                            <option value="fairphone">Fairphone</option>
-                            <option value="poco">POCO</option>
-                            <option value="redmi">Redmi</option>
-                            <option value="infinix">Infinix</option>
-                            <option value="tecno">TECNO</option>
-                            <option value="itel">Itel</option>
-                            <option value="other">Other Brand</option>
-                        </select>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300">Email
+                                Address</label>
+                            <input type="email" name="email"
+                                class="w-full border-2 border-gray-300 dark:border-gray-600 rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-white dark:bg-gray-700 transition-all"
+                                placeholder="Enter your email (optional)">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300">Preferred
+                                Date</label>
+                            <input type="date" name="preferredDate"
+                                class="w-full border-2 border-gray-300 dark:border-gray-600 rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-white dark:bg-gray-700 transition-all">
+                        </div>
                     </div>
-                    <div>
-                        <label class="block text-sm font-semibold mb-2 text-white">Phone Model *</label>
-                        <input type="text" name="phoneModel" required
-                            class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black placeholder-gray-600 placeholder-opacity-75"
-                            placeholder="e.g., iPhone 15 Pro Max, Samsung Galaxy S24">
-                    </div>
-                </div>
 
-                <!-- Repair Information -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <label class="block text-sm font-semibold mb-2 text-white">Repair Type *</label>
-                        <select name="repairType" required
-                            class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black">
-                            <option value="">Select repair type</option>
-                            <option value="screen">Screen Replacement</option>
-                            <option value="battery">Battery Replacement</option>
-                            <option value="water">Water Damage</option>
-                            <option value="charging">Charging Port</option>
-                            <option value="camera">Camera Repair</option>
-                            <option value="software">Software Issues</option>
-                            <option value="other">Other</option>
-                        </select>
+                    <!-- Device Information Section -->
+                    <div class="border-t-2 border-gray-200 dark:border-gray-700 pt-8 mt-8">
+                        <div class="mb-6">
+                            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white">Device Information
+                            </h2>
+                            <p class="text-gray-600 dark:text-gray-400 mt-2">Tell us about your device</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300">
+                                    Phone Brand <span class="text-red-500">*</span>
+                                </label>
+                                <select name="phoneBrand" required
+                                    class="w-full border-2 border-gray-300 dark:border-gray-600 rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-white dark:bg-gray-700 transition-all appearance-none bg-white dark:bg-gray-700">
+                                    <option value="">Select your phone brand</option>
+                                    <option value="iphone">iPhone (Apple)</option>
+                                    <option value="samsung">Samsung Galaxy</option>
+                                    <option value="google">Google Pixel</option>
+                                    <option value="oneplus">OnePlus</option>
+                                    <option value="huawei">Huawei</option>
+                                    <option value="xiaomi">Xiaomi</option>
+                                    <option value="oppo">OPPO</option>
+                                    <option value="vivo">Vivo</option>
+                                    <option value="realme">Realme</option>
+                                    <option value="motorola">Motorola</option>
+                                    <option value="lg">LG</option>
+                                    <option value="sony">Sony Xperia</option>
+                                    <option value="nokia">Nokia</option>
+                                    <option value="honor">Honor</option>
+                                    <option value="asus">ASUS ROG Phone</option>
+                                    <option value="nothing">Nothing Phone</option>
+                                    <option value="fairphone">Fairphone</option>
+                                    <option value="poco">POCO</option>
+                                    <option value="redmi">Redmi</option>
+                                    <option value="infinix">Infinix</option>
+                                    <option value="tecno">TECNO</option>
+                                    <option value="itel">Itel</option>
+                                    <option value="other">Other Brand</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300">
+                                    Phone Model <span class="text-red-500">*</span>
+                                </label>
+                                <input type="text" name="phoneModel" required
+                                    class="w-full border-2 border-gray-300 dark:border-gray-600 rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-white dark:bg-gray-700 transition-all"
+                                    placeholder="e.g., iPhone 15 Pro Max, Samsung Galaxy S24">
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <label class="block text-sm font-semibold mb-2 text-white">Urgency Level</label>
-                        <select name="urgency"
-                            class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black">
-                            <option value="normal">Normal (1-2 days)</option>
-                            <option value="urgent">Urgent (Same day)</option>
-                            <option value="emergency">Emergency (ASAP)</option>
-                        </select>
+
+                    <!-- Repair Information Section -->
+                    <div class="border-t-2 border-gray-200 dark:border-gray-700 pt-8 mt-8">
+                        <div class="mb-6">
+                            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white">Repair Details</h2>
+                            <p class="text-gray-600 dark:text-gray-400 mt-2">What needs to be fixed?</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300">
+                                    Repair Type <span class="text-red-500">*</span>
+                                </label>
+                                <select name="repairType" required
+                                    class="w-full border-2 border-gray-300 dark:border-gray-600 rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-white dark:bg-gray-700 transition-all">
+                                    <option value="">Select repair type</option>
+                                    <option value="screen">Screen Replacement</option>
+                                    <option value="battery">Battery Replacement</option>
+                                    <option value="water">Water Damage</option>
+                                    <option value="charging">Charging Port</option>
+                                    <option value="camera">Camera Repair</option>
+                                    <option value="software">Software Issues</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300">Urgency
+                                    Level</label>
+                                <select name="urgency"
+                                    class="w-full border-2 border-gray-300 dark:border-gray-600 rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-white dark:bg-gray-700 transition-all">
+                                    <option value="normal">Normal (1-2 days)</option>
+                                    <option value="urgent">Urgent (Same day)</option>
+                                    <option value="emergency">Emergency (ASAP)</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Problem Description -->
-                <div>
-                    <label class="block text-sm font-semibold mb-2 text-white">Problem Description *</label>
-                    <textarea name="problemDescription" required rows="4"
-                        class="w-full border rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 text-black placeholder-gray-600 placeholder-opacity-75"
-                        placeholder="Please describe the issue with your phone in detail..."></textarea>
-                </div>
-
-                <!-- Additional Services -->
-                <div>
-                    <label class="block text-sm font-semibold mb-2 text-white">Additional Services
-                        (Optional)</label>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <label class="flex items-center space-x-2 text-white">
-                            <input type="checkbox" name="dataBackup" value="yes" class="rounded">
-                            <span>Data Backup Service</span>
+                    <!-- Problem Description -->
+                    <div class="border-t-2 border-gray-200 dark:border-gray-700 pt-8 mt-8">
+                        <label class="block text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300">
+                            Problem Description <span class="text-red-500">*</span>
                         </label>
-                        <label class="flex items-center space-x-2 text-white">
-                            <input type="checkbox" name="screenProtector" value="yes" class="rounded">
-                            <span>Screen Protector Installation</span>
-                        </label>
-                        <label class="flex items-center space-x-2 text-white">
-                            <input type="checkbox" name="caseInstallation" value="yes" class="rounded">
-                            <span>Case Installation</span>
-                        </label>
-                        <label class="flex items-center space-x-2 text-white">
-                            <input type="checkbox" name="warrantyExtension" value="yes" class="rounded">
-                            <span>Extended Warranty</span>
-                        </label>
+                        <textarea name="problemDescription" required rows="5"
+                            class="w-full border-2 border-gray-300 dark:border-gray-600 rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-white dark:bg-gray-700 transition-all resize-none"
+                            placeholder="Please describe the issue with your phone in detail..."></textarea>
                     </div>
-                </div>
 
-                <!-- Submit Button -->
-                <div class="text-center">
-                    <button type="submit"
-                        class="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
-                        Book Repair Appointment
-                    </button>
-                </div>
-            </form>
+                    <!-- Additional Services -->
+                    <div class="border-t-2 border-gray-200 dark:border-gray-700 pt-8 mt-8">
+                        <label class="block text-sm font-semibold mb-4 text-gray-700 dark:text-gray-300">Additional
+                            Services (Optional)</label>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <label
+                                class="flex items-center space-x-3 p-4 border-2 border-gray-200 dark:border-gray-700 rounded-xl hover:border-blue-400 dark:hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20 cursor-pointer transition-all">
+                                <input type="checkbox" name="dataBackup" value="yes"
+                                    class="w-5 h-5 text-blue-600 rounded focus:ring-blue-500">
+                                <span class="text-gray-700 dark:text-gray-300 font-medium">💾 Data Backup Service</span>
+                            </label>
+                            <label
+                                class="flex items-center space-x-3 p-4 border-2 border-gray-200 dark:border-gray-700 rounded-xl hover:border-blue-400 dark:hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20 cursor-pointer transition-all">
+                                <input type="checkbox" name="screenProtector" value="yes"
+                                    class="w-5 h-5 text-blue-600 rounded focus:ring-blue-500">
+                                <span class="text-gray-700 dark:text-gray-300 font-medium">🛡️ Screen Protector
+                                    Installation</span>
+                            </label>
+                            <label
+                                class="flex items-center space-x-3 p-4 border-2 border-gray-200 dark:border-gray-700 rounded-xl hover:border-blue-400 dark:hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20 cursor-pointer transition-all">
+                                <input type="checkbox" name="caseInstallation" value="yes"
+                                    class="w-5 h-5 text-blue-600 rounded focus:ring-blue-500">
+                                <span class="text-gray-700 dark:text-gray-300 font-medium">📦 Case Installation</span>
+                            </label>
+                            <label
+                                class="flex items-center space-x-3 p-4 border-2 border-gray-200 dark:border-gray-700 rounded-xl hover:border-blue-400 dark:hover:border-blue-500 hover:bg-blue-50 dark:hover:bg-blue-900/20 cursor-pointer transition-all">
+                                <input type="checkbox" name="warrantyExtension" value="yes"
+                                    class="w-5 h-5 text-blue-600 rounded focus:ring-blue-500">
+                                <span class="text-gray-700 dark:text-gray-300 font-medium">⭐ Extended Warranty</span>
+                            </label>
+                        </div>
+                    </div>
 
-            <!-- Booking Information -->
-            <div class="mt-8 bg-gray-500 dark:bg-gray-700 p-6 rounded-lg">
-                <h3 class="text-xl font-semibold mb-4 text-white">What Happens Next?</h3>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div class="text-center">
-                        <div class="text-3xl mb-2">📞</div>
-                        <h4 class="font-semibold text-white">1. Confirmation Call</h4>
-                        <p class="text-sm text-gray-300">We'll call you within 2 hours to confirm your appointment
-                        </p>
+                    <!-- Submit Button -->
+                    <div class="border-t-2 border-gray-200 dark:border-gray-700 pt-8 mt-8">
+                        <button type="submit"
+                            class="w-full bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:via-indigo-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-2xl text-lg">
+                            📅 Book Repair Appointment
+                        </button>
                     </div>
-                    <div class="text-center">
-                        <div class="text-3xl mb-2">🔧</div>
-                        <h4 class="font-semibold text-white">2. Repair Process</h4>
-                        <p class="text-sm text-gray-300">Our expert technicians will diagnose and fix your device
-                        </p>
+                </form>
+
+                <!-- Booking Information Cards -->
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div
+                        class="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/30 p-6 rounded-xl border-2 border-blue-200 dark:border-blue-800">
+                        <div class="text-4xl mb-3 text-center">📞</div>
+                        <h3 class="text-lg font-bold mb-2 text-gray-800 dark:text-white text-center">1. Confirmation
+                            Call</h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 text-center">We'll call you within 2 hours to
+                            confirm your appointment</p>
                     </div>
-                    <div class="text-center">
-                        <div class="text-3xl mb-2">✅</div>
-                        <h4 class="font-semibold text-white">3. Quality Check</h4>
-                        <p class="text-sm text-gray-300">We test everything to ensure perfect functionality</p>
+                    <div
+                        class="bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-900/30 dark:to-purple-900/30 p-6 rounded-xl border-2 border-indigo-200 dark:border-indigo-800">
+                        <div class="text-4xl mb-3 text-center">🔧</div>
+                        <h3 class="text-lg font-bold mb-2 text-gray-800 dark:text-white text-center">2. Repair Process
+                        </h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 text-center">Our expert technicians will
+                            diagnose and fix your device</p>
+                    </div>
+                    <div
+                        class="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/30 dark:to-pink-900/30 p-6 rounded-xl border-2 border-purple-200 dark:border-purple-800">
+                        <div class="text-4xl mb-3 text-center">✅</div>
+                        <h3 class="text-lg font-bold mb-2 text-gray-800 dark:text-white text-center">3. Quality Check
+                        </h3>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 text-center">We test everything to ensure
+                            perfect functionality</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="text-center p-4 mt-8">
+    <!-- Back to Home Section -->
+    <section class="py-12 px-6 text-center">
         <a href="index.html"
-            class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded items-center">
-            Back to Home</a>
+            class="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+            <span>←</span>
+            <span>Back to Home</span>
+        </a>
     </section>
-    </div>
-    <section class="bg-gray-900 py-8 text-white">
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 py-8 text-white">
         <div class="container mx-auto text-center">
             <p class="text-sm">&copy; 2024 Sommy Repairs. All rights reserved.</p>
         </div>
-    </section>
+    </footer>
+
     <script type="module" src="/src/main.js"></script>
 </body>
 
