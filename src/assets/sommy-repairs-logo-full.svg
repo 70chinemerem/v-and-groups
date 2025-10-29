@@ -1,0 +1,39 @@
+<svg width="280" height="80" viewBox="0 0 280 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle for Icon with better visibility -->
+  <circle cx="40" cy="40" r="35" fill="#3b82f6" opacity="0.25"/>
+  <circle cx="40" cy="40" r="33" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.4"/>
+  
+  <!-- Phone Icon with Repair Tools -->
+  <g id="logo-icon-group" transform="translate(18, 8)">
+    <!-- Phone Outline - White with better contrast -->
+    <rect x="0" y="4" width="44" height="64" rx="5" fill="none" stroke="#ffffff" stroke-width="3"/>
+    <!-- Screen -->
+    <rect x="5" y="10" width="34" height="48" rx="2" fill="none" stroke="#ffffff" stroke-width="2.5"/>
+    <!-- Home Button/Camera -->
+    <circle cx="22" cy="66" r="3" fill="#ffffff"/>
+    <!-- Screen Reflection for depth -->
+    <rect x="8" y="12" width="28" height="4" fill="#ffffff" opacity="0.3"/>
+  </g>
+  
+  <!-- Repair Tools - More visible -->
+  <g id="repair-tools-overlay" transform="translate(48, 5)">
+    <!-- Screwdriver -->
+    <path d="M 0 15 L 0 28 M -3 21.5 L 3 21.5" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <!-- Wrench -->
+    <path d="M 4 18 L 12 26 M 9 22 L 12 18 L 9 14" stroke="#ffffff" stroke-width="3" stroke-linecap="round" fill="none"/>
+  </g>
+  
+  <!-- Company Name Text - Larger and bolder -->
+  <g id="company-name">
+    <text x="95" y="38" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#ffffff" letter-spacing="1.5">
+      Sommy Repairs
+    </text>
+    <text x="95" y="56" font-family="Arial, sans-serif" font-size="13" fill="#ffffff" opacity="0.9" letter-spacing="0.8">
+      Professional Phone Repair Services
+    </text>
+  </g>
+  
+  <!-- Decorative Elements - More visible -->
+  <circle cx="250" cy="18" r="4" fill="#ffffff" opacity="0.6"/>
+  <circle cx="268" cy="24" r="3" fill="#ffffff" opacity="0.5"/>
+</svg>

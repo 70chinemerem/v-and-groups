@@ -6,26 +6,37 @@
 * Persists user preference in localStorage
 * Updates button icon dynamically
 */
-// ☀️ Theme Toggle
+// ☀️ Theme Toggle - Enhanced with better visibility
 const themeBtn = document.getElementById("theme-toggle");
+const themeIcon = document.getElementById("theme-icon");
 
 // Check if theme toggle button exists before adding event listener
 if (themeBtn) {
   themeBtn.addEventListener("click", () => {
     // Toggle dark class on document element
     document.documentElement.classList.toggle("dark");
-    // Determine current mode and update button
+    // Determine current mode and update button icon
     const mode = document.documentElement.classList.contains("dark")
       ? "dark"
       : "light";
     localStorage.setItem("theme", mode);
-    themeBtn.textContent = mode === "dark" ? "☪︎" : "☀️";
+    // Update icon in span element if it exists, otherwise update button text
+    if (themeIcon) {
+      themeIcon.textContent = mode === "dark" ? "🌙" : "☀️";
+    } else {
+      themeBtn.textContent = mode === "dark" ? "🌙" : "☀️";
+    }
   });
 
   // Load saved theme preference on page load
   if (localStorage.getItem("theme") === "dark") {
     document.documentElement.classList.add("dark");
-    themeBtn.textContent = "☪︎";
+    // Update icon in span element if it exists, otherwise update button text
+    if (themeIcon) {
+      themeIcon.textContent = "🌙";
+    } else {
+      themeBtn.textContent = "🌙";
+    }
   }
 }
 

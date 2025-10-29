@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" href="src/assets/SR.png" />
+    <link rel="icon" type="image/svg+xml" href="src/assets/sommy-repairs-logo-icon.svg" />
     <title>Costomer Care</title>
     <link rel="stylesheet" href="src/style.css">
     <link rel="stylesheet" href="src/letter.css">
@@ -12,9 +12,10 @@
 </head>
 
 <body class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200">
+    <!--theme-toggle-->
     <button id="theme-toggle"
-        class="fixed top-4 right-4 rounded-full shadow-lg bg-gray-800 p-2  transition-colors hover:bg-gray-500">
-        ☀️
+        class="fixed top-4 right-4 z-50 rounded-full shadow-xl bg-white dark:bg-gray-700 border-2 border-blue-500 p-3 text-2xl min-w-[48px] min-h-[48px] flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:bg-blue-50 dark:hover:bg-gray-600">
+        <span id="theme-icon">☀️</span>
     </button>
     <!-- WhatsApp Chat Widget -->
     <div id="whatsapp-widget" class="fixed bottom-4 right-4 z-50">
@@ -28,8 +29,10 @@
         </a>
     </div>
     <!--logo-->
-    <a href="index.html" class="items-center flex space-x-4 p-4 bg-gray-900 text-white">
-        <h1 class="text-2xl font-semibold "><img src="src/assets/my-logo 2.png"></h1>
+    <a href="index.html" class="logo-container items-center flex space-x-4 p-4 bg-gray-900 text-white">
+        <h1 class="text-2xl font-semibold">
+            <img src="src/assets/sommy-repairs-logo-full.svg" alt="Sommy Repairs Logo" class="h-10 md:h-12 lg:h-14">
+        </h1>
     </a>
     <!-- Customer Care Form Section -->
     <section class="py-16 px-6 md:px-16 bg-gray-200 dark:bg-gray-800">
